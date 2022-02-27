@@ -32,3 +32,8 @@ ng serve (localhost:4200)
 
 ### Project Test
 ng test (Total test count: 7)
+
+### Authentication Information (TEST)
+E-mail: mikro@mikro.com.tr
+
+Password: 123456
