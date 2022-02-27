@@ -1,0 +1,29 @@
+:host {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 42px;
+        color: #333333;
+    }
+
+    p {
+        &:first-child {
+            font-size: 18px;
+            margin-top: 50px;
+        }
+
+        &:last-child {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #3988FF;
+        }
+    }
+}

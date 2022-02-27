@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+        <div class="logo">
+            <img src="../assets/img/logo.svg" />
+        </div>
+        <p class="information-text">{{ message }}</p>
+        <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" #email="ngModel" [(ngModel)]="user.Email" placeholder="E-mail adresinizi giriniz" required minlength="4" />
+                <div *ngIf="email.errors && (loginForm.submitted || email.touched)">
+                    <div class="errors" *ngIf="email.errors">
+                        <span [hidden]="!email.errors?.['required']">Lütfen e-mail adresinizi giriniz.</span>
+                        <span [hidden]="!email.errors?.['minlength']">Lütfen en az dört karakterden oluşan e-mail giriniz.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre</label>
+                <input type="password" name="password" id="password" #password="ngModel" [(ngModel)]="user.Password" placeholder="********" required minlength="4" />
+                <div *ngIf="(loginForm.submitted || password.touched)">
+                    <div class="errors" *ngIf="password.errors">
+                        <span [hidden]="!password.errors?.['required']">Lütfen şifre giriniz.</span>
+                        <span [hidden]="!password.errors?.['minlength']">Lütfen en az dört karakter şifre belirtiniz.</span>
+                    </div>
+                </div>
+            </div>
+            <a routerLink="/reset-password">Şifremi unuttum</a>
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+</div>

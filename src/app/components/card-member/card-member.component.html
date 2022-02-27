@@ -1,0 +1,10 @@
+<div class="card-member" *ngFor="let member of memberData">
+    <div class="card-left">
+        <img src="{{ member.picture }}" />
+    </div>
+    <div class="card-right">
+        <p>{{ member.title }} {{ member.firstName }} {{ member.lastName }}</p>
+        <a href="mailto:dummy@dummy.com">Email: dummy@dummy.com</a>
+        <span>Phone: +90 216 222 00 22</span>
+    </div>
+</div>
