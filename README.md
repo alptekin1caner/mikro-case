@@ -26,6 +26,7 @@ Mikro Yazılım A.Ş.
 
 
 ### Project Start
+npm install (When the project was first cloned)
 ng serve (localhost:4200)
 
 ### Project Test
